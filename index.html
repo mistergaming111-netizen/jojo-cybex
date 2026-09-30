@@ -3,34 +3,155 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>JoJo Codex</title>
-  <link rel="icon" type="image/png" href="assets/images/ui/icon-jojo-p5.png">
+  <title>JoJo Codex | L'encyclopédie Bizarre</title>
   
-  <!-- Lien vers le fichier CSS principal -->
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="assets/images/ui/favicon.png">
+
+  <!-- CSS -->
   <link rel="stylesheet" href="css/main.css">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Montserrat:wght@400;600;700;900&display=swap" rel="stylesheet">
 </head>
 <body>
 
-<header class="site-header">
-  <div class="header-container">
-    
-    <!-- Ton Logo / Titre -->
-    <a href="index.html" class="logo">
-        <img src="assets/images/ui/logo-diego-brando.jpg" alt="Logo JoJo Codex" class="logo-img">
-      JOJO <span>CODEX</span>
-    </a>
+  <!-- EN-TÊTE -->
+  <header class="site-header">
+    <div class="header-container">
+      
+      <a href="index.html" class="logo">
+        <img src="assets/images/ui/logo.png" alt="Logo JoJo Codex" class="logo-img">
+        <span class="logo-txt">JOJO <span>CODEX</span></span>
+      </a>
 
-    <!-- Tes Liens -->
-    <nav class="main-nav">
-      <ul>
-        <li><a href="index.html" class="active">Accueil</a></li>
-        <li><a href="parts.html">Arcs</a></li>
-        <li><a href="stands.html">Stands</a></li>
-      </ul>
-    </nav>
+      <nav class="main-nav">
+        <ul>
+          <li><a href="index.html" class="active">Accueil</a></li>
+          <li><a href="parts.html">Arcs</a></li>
+          <li><a href="stands.html">Stands</a></li>
+          <li><a href="characters.html">Joestar</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
 
-  </div>
-</header>
+    </div>
+  </header>
+
+  <!-- CONTENU PRINCIPAL -->
+  <main>
+
+    <!-- SECTION HERO -->
+    <section class="hero-section">
+      <div class="hero-container">
+        
+        <div class="hero-content">
+          <p class="tagline">GOGOGO • ゴゴゴゴ</p>
+          <h1>L'ENCYCLOPÉDIE BIZARRE</h1>
+          <p class="description">
+            Explore la lignée Joestar, les pouvoirs des Stands et les moments cultes de l'œuvre d'Hirohiko Araki.
+          </p>
+
+          <div class="hero-buttons">
+            <a href="parts.html" class="btn btn-primary">Explorer les Arcs</a>
+            <a href="stands.html" class="btn btn-secondary">Voir les Stands</a>
+          </div>
+        </div>
+
+        <div class="hero-visual">
+          <div class="frame-manga">
+            <img src="assets/images/heroes/jojo-all-stars.jpg" alt="Protagonistes JoJo">
+            <span class="menacing-overlay">ゴゴゴ</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECTION ARCS -->
+    <section class="parts-preview">
+      <div class="section-container">
+        
+        <div class="section-title">
+          <h2>Les Arcs Narratifs</h2>
+          <p>Une aventure à travers les générations</p>
+        </div>
+
+        <div class="parts-grid">
+          <article class="part-card">
+            <span class="part-number">Part 1</span>
+            <h3>Phantom Blood</h3>
+            <p class="part-era">1880 • Angleterre</p>
+            <a href="parts.html#part1" class="card-link">Découvrir →</a>
+          </article>
+
+          <article class="part-card">
+            <span class="part-number">Part 2</span>
+            <h3>Battle Tendency</h3>
+            <p class="part-era">1938 • Europe</p>
+            <a href="parts.html#part2" class="card-link">Découvrir →</a>
+          </article>
+
+          <article class="part-card">
+            <span class="part-number">Part 3</span>
+            <h3>Stardust Crusaders</h3>
+            <p class="part-era">1987 • Égypte</p>
+            <a href="parts.html#part3" class="card-link">Découvrir →</a>
+          </article>
+
+          <article class="part-card">
+            <span class="part-number">Part 4</span>
+            <h3>Diamond is Unbreakable</h3>
+            <p class="part-era">1999 • Morioh</p>
+            <a href="parts.html#part4" class="card-link">Découvrir →</a>
+          </article>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECTION STAND FOCUS -->
+    <section class="featured-stand">
+      <div class="featured-container">
+        <aside class="badge">Stand à la une</aside>
+        <div class="featured-info">
+          <h2>STAR PLATINUM</h2>
+          <p class="stand-user">Manié par <strong>Jotaro Kujo</strong></p>
+          <p class="stand-desc">
+            Stand à courte portée doté d'une force brutale, d'une précision chirurgicale et de la capacité d'arrêter le temps.
+          </p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- PIED DE PAGE -->
+  <footer class="site-footer">
+    <div class="footer-container">
+      
+      <div class="footer-brand">
+        <h3>JOJO CODEX</h3>
+        <p>Projet encyclopédique fait par un fan pour les fans.</p>
+      </div>
+
+      <div class="footer-links">
+        <h4>Navigation</h4>
+        <ul>
+          <li><a href="parts.html">Tous les Arcs</a></li>
+          <li><a href="stands.html">Base des Stands</a></li>
+          <li><a href="characters.html">Arbre Joestar</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-legal">
+        <p>&copy; 2026 - JoJo's Bizarre Adventure est une œuvre d'Hirohiko Araki.</p>
+      </div>
+
+    </div>
+  </footer>
 
 </body>
 </html>

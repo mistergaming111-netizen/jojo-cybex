@@ -1,0 +1,100 @@
+/* Grille des Arcs */
+.parts-preview {
+  padding: 4rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.section-title h2 {
+  font-family: var(--font-heading);
+  font-size: 2.5rem;
+  color: var(--color-primary);
+}
+
+.parts-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+}
+
+.part-card {
+  background-color: var(--color-surface);
+  border: 2px solid rgba(240, 40, 136, 0.2);
+  border-radius: var(--radius-sm);
+  padding: 1.5rem;
+  transition: var(--transition);
+}
+
+.part-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--color-secondary);
+}
+
+.part-number {
+  font-family: var(--font-heading);
+  color: var(--color-accent);
+}
+
+.part-card h3 {
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  margin: 0.4rem 0;
+}
+
+.part-era {
+  color: var(--color-text-muted);
+  font-size: 0.85rem;
+  margin-bottom: 1rem;
+}
+
+.card-link {
+  color: var(--color-secondary);
+  font-weight: 700;
+}
+
+/* Stand Focus */
+.featured-stand {
+  max-width: 1200px;
+  margin: 0 auto 4rem;
+  padding: 0 2rem;
+}
+
+.featured-container {
+  background-color: var(--color-surface);
+  border: 2px solid var(--color-accent);
+  border-radius: var(--radius-lg);
+  padding: 2rem;
+  position: relative;
+}
+
+.badge {
+  position: absolute;
+  top: -12px;
+  left: 20px;
+  background-color: var(--color-accent);
+  color: #000;
+  font-family: var(--font-heading);
+  padding: 0.2rem 0.6rem;
+  font-size: 0.85rem;
+  border-radius: 4px;
+}
+
+.featured-info h2 {
+  font-family: var(--font-heading);
+  font-size: 2rem;
+  color: var(--color-secondary);
+}
+
+.stand-user {
+  color: var(--color-primary);
+  margin-bottom: 0.8rem;
+}
+
+.stand-desc {
+  color: var(--color-text-muted);
+}
