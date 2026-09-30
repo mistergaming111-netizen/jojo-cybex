@@ -1,0 +1,12 @@
+/* BASE */
+@import 'base/_variables.css';
+@import 'base/_reset.css';
+
+/* COMPONENTS */
+@import 'components/_nav.css';
+@import 'components/_buttons.css';
+@import 'components/_cards.css';
+@import 'components/_footer.css';
+
+/* PAGES */
+@import 'pages/_home.css';
