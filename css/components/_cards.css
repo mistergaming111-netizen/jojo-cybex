@@ -72,17 +72,7 @@
   position: relative;
 }
 
-.badge {
-  position: absolute;
-  top: -12px;
-  left: 20px;
-  background-color: var(--color-accent);
-  color: #000;
-  font-family: var(--font-heading);
-  padding: 0.2rem 0.6rem;
-  font-size: 0.85rem;
-  border-radius: 4px;
-}
+
 
 .featured-info h2 {
   font-family: var(--font-heading);
@@ -97,4 +87,148 @@
 
 .stand-desc {
   color: var(--color-text-muted);
+}
+/* Badge classique (dans une liste ou une carte normale) */
+.badge {
+  display: inline-block;
+  padding: 0.25rem 0.6rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  border-radius: 4px;
+  background-color: var(--color-primary, #6b21a8);
+  color: #ffffff;
+  margin-bottom: 0.5rem;
+}
+
+/* Badge spécial pour l'encadré Featured Stand */
+.featured-container .badge {
+  position: absolute;
+  top: -12px;
+  left: 20px;
+  background-color: var(--color-accent);
+  color: #000;
+  font-family: var(--font-heading);
+  margin-bottom: 0;
+}
+
+/* Variantes de couleurs pour les parties */
+.badge.part-7 {
+  background-color: #d97706;
+}
+
+.badge.part-3 {
+  background-color: #2563eb;
+}
+/* Container principal */
+.characters-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem;
+}
+
+.page-title {
+  text-align: center;
+  font-family: var(--font-heading);
+  font-size: 2.5rem;
+  color: var(--color-primary);
+  margin-bottom: 2rem;
+}
+
+/* Barre de filtres */
+.filter-bar {
+  display: flex;
+  justify-content: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  margin-bottom: 2.5rem;
+}
+
+.filter-btn {
+  background-color: var(--color-surface);
+  color: var(--color-text);
+  border: 1px solid var(--color-primary);
+  padding: 0.5rem 1.25rem;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  font-family: var(--font-heading);
+  font-size: 0.9rem;
+  transition: var(--transition);
+}
+
+.filter-btn:hover,
+.filter-btn.active {
+  background-color: var(--color-primary);
+  color: #ffffff;
+}
+
+/* Grille de cartes */
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 1.5rem;
+}
+
+/* Style de chaque carte */
+.card {
+  background-color: var(--color-surface);
+  border: 2px solid rgba(240, 40, 136, 0.2);
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: var(--transition);
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  border-color: var(--color-secondary);
+}
+
+/* Formatage propre des images */
+.card-image {
+  width: 100%;
+  height: 220px;
+  overflow: hidden;
+  background-color: #111;
+}
+
+.card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.card:hover .card-image img {
+  transform: scale(1.05);
+}
+
+/* Contenu textuel de la carte */
+.card-content {
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  flex-grow: 1;
+}
+
+.card-content h2 {
+  font-family: var(--font-heading);
+  font-size: 1.35rem;
+  margin-top: 0.2rem;
+}
+
+.role-tag {
+  font-weight: 700;
+  color: var(--color-secondary);
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.description {
+  color: var(--color-text-muted);
+  font-size: 0.9rem;
+  line-height: 1.4;
+  margin-top: 0.3rem;
 }
