@@ -2,87 +2,86 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Archives des Stands - JoJo Codex</title>
-  
-  <!-- Liens vers les feuilles de style selon ta structure modulaire -->
+  <title>Archives des Stands</title>
+  <!-- 1. Charge tes variables, ton fond et tes polices globales -->
+  <link rel="stylesheet" href="css/main.css">
+  <!-- 2. Charge la structure des cartes que je t'ai donnée -->
   <link rel="stylesheet" href="css/pages/_stands.css">
 </head>
 <body>
 
-  <!-- Navigation vers les autres fichiers de la racine -->
-  <nav class="codex-nav">
-    <a href="index.html" class="nav-link">← Accueil</a>
-    <a href="parts.html" class="nav-link">Parties</a>
-    <a href="characters.html" class="nav-link">Personnages</a>
-    <a href="contact.html" class="nav-link">Contact</a>
-  </nav>
+  <header class="site-header">
+    <nav class="filter-bar">
+      <a href="index.html" class="filter-btn">← Accueil</a>
+      <a href="#" class="filter-btn">Parties</a>
+      <a href="#" class="filter-btn">Personnages</a>
+      <a href="#" class="filter-btn">Contact</a>
+    </nav>
+  </header>
 
-  <main>
-    <!-- Section Stands / Héros -->
-    <section id="stands-section" class="jojo-section">
-      <header class="section-header">
-        <img src="assets/images/ui/logo-diego-brando.jpg" alt="Emblème Diego Brando" class="section-logo" />
-        <h2>Archives des Stands & Héros</h2>
-      </header>
-      
-      <div class="heroes-grid">
-        <!-- Fiche Jotaro -->
-        <article class="hero-card">
-          <div class="card-image">
-            <img src="assets/images/heroes/jotaro.webp" alt="Jotaro Kujo" />
-          </div>
-          <div class="card-content">
-            <h3>Jotaro Kujo</h3>
-            <p class="stand-name">Stand : Star Platinum</p>
-          </div>
-        </article>
+  <main class="characters-container">
+    <h1 class="page-title">Archives des Stands</h1>
+    <p style="text-align: center; color: var(--color-text-muted); margin-bottom: 2rem;">Les 5 Stands originels de Stardust Crusaders</p>
 
-        <!-- Fiche Joseph -->
-        <article class="hero-card">
-          <div class="card-image">
-            <img src="assets/images/heroes/joseph.webp" alt="Joseph Joestar" />
-          </div>
-          <div class="card-content">
-            <h3>Joseph Joestar</h3>
-            <p class="stand-name">Stand : Hermit Purple</p>
-          </div>
-        </article>
+    <div class="stand-gallery">
 
-        <!-- Fiche Jonathan -->
-        <article class="hero-card">
-          <div class="card-image">
-            <img src="assets/images/heroes/jonathan-jo.webp" alt="Jonathan Joestar" />
-          </div>
-          <div class="card-content">
-            <h3>Jonathan Joestar</h3>
-            <p class="stand-name">Maître de l'Onde</p>
-          </div>
-        </article>
+      <article class="stand-card">
+        <div class="stand-image-wrapper">
+          <!-- Vérifie le dossier exact de tes images, c'est pour ça qu'elles ne s'affichent pas -->
+          <img src="assets/images/stands/theworld.webp" alt="The World">
+        </div>
+        <div class="stand-info">
+          <h2 class="stand-name">The World</h2>
+          <p class="stand-details"><strong>Manié par :</strong> <span class="role-tag">DIO</span></p>
+          <p class="stand-details"><strong>Pouvoir :</strong> Arrêt du temps (Za Warudo)</p>
+        </div>
+      </article>
 
-        <!-- Fiche Caesar -->
-        <article class="hero-card">
-          <div class="card-image">
-            <img src="assets/images/heroes/caesar.webp" alt="Caesar Zeppeli" />
-          </div>
-          <div class="card-content">
-            <h3>Caesar Zeppeli</h3>
-            <p class="stand-name">Utilisateur de l'Onde</p>
-          </div>
-        </article>
+      <article class="stand-card">
+        <div class="stand-image-wrapper">
+          <img src="assets/images/stands/starplat.webp" alt="Star Platinum">
+        </div>
+        <div class="stand-info">
+          <h2 class="stand-name">Star Platinum</h2>
+          <p class="stand-details"><strong>Manié par :</strong> <span class="role-tag">Jotaro Kujo</span></p>
+          <p class="stand-details"><strong>Pouvoir :</strong> Force, vitesse et précision</p>
+        </div>
+      </article>
 
-        <!-- Fiche Speedwagon -->
-        <article class="hero-card">
-          <div class="card-image">
-            <img src="assets/images/heroes/speedwagon.webp" alt="Speedwagon" />
-          </div>
-          <div class="card-content">
-            <h3>R.E.O. Speedwagon</h3>
-            <p class="stand-name">Allié de la lignée Joestar</p>
-          </div>
-        </article>
-      </div>
-    </section>
+      <article class="stand-card">
+        <div class="stand-image-wrapper">
+          <img src="assets/images/stands/silver.webp" alt="Silver Chariot">
+        </div>
+        <div class="stand-info">
+          <h2 class="stand-name">Silver Chariot</h2>
+          <p class="stand-details"><strong>Manié par :</strong> <span class="role-tag">Jean Pierre Polnareff</span></p>
+          <p class="stand-details"><strong>Pouvoir :</strong> Maîtrise de l'épée et vitesse</p>
+        </div>
+      </article>
+
+      <article class="stand-card">
+        <div class="stand-image-wrapper">
+          <img src="assets/images/stands/hermit.webp" alt="Hermit Purple">
+        </div>
+        <div class="stand-info">
+          <h2 class="stand-name">Hermit Purple</h2>
+          <p class="stand-details"><strong>Manié par :</strong> <span class="role-tag">Joseph Joestar</span></p>
+          <p class="stand-details"><strong>Pouvoir :</strong> Divination et lianes</p>
+        </div>
+      </article>
+
+      <article class="stand-card">
+        <div class="stand-image-wrapper">
+          <img src="assets/images/stands/hierophant.webp" alt="Hierophant Green">
+        </div>
+        <div class="stand-info">
+          <h2 class="stand-name">Hierophant Green</h2>
+          <p class="stand-details"><strong>Manié par :</strong> <span class="role-tag">Noriaki Kakyoin</span></p>
+          <p class="stand-details"><strong>Pouvoir :</strong> Émeraude Splash et possession</p>
+        </div>
+      </article>
+
+    </div>
   </main>
 
 </body>
