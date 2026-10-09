@@ -1,0 +1,186 @@
+/* =========================================
+   STYLE COMPLET - PAGE STANDS (jojo-codex)
+   Fichier : css/pages/stands.css
+========================================= */
+
+/* --- 1. RESET ET VARIABLES --- */
+:root {
+  --jojo-primary: #4a148c;   /* Violet profond */
+  --jojo-secondary: #ffb300; /* Or / Jaune (Thème Brando) */
+  --jojo-bg: #121212;        /* Fond très sombre */
+  --jojo-surface: #1e1e1e;   /* Fond des cartes et de la nav */
+  --jojo-text: #ffffff;      /* Texte clair */
+  --font-main: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  --transition-speed: 0.3s;
+}
+
+/* Réinitialisation globale pour éviter les conflits */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--jojo-bg);
+  color: var(--jojo-text);
+  font-family: var(--font-main);
+  line-height: 1.6;
+  overflow-x: hidden; /* Empêche le défilement horizontal */
+}
+
+/* --- 2. BARRE DE NAVIGATION --- */
+.codex-nav {
+  padding: 1.2rem 2rem;
+  background-color: var(--jojo-surface);
+  border-bottom: 2px solid var(--jojo-primary);
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.nav-link {
+  color: var(--jojo-secondary);
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.1rem;
+  transition: color var(--transition-speed) ease, text-shadow var(--transition-speed) ease;
+}
+
+.nav-link:hover {
+  color: var(--jojo-text);
+  text-shadow: 0 0 8px rgba(255, 179, 0, 0.6);
+}
+
+/* --- 3. EN-TÊTE DE LA SECTION --- */
+#stands-section {
+  padding: 4rem 2rem;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 3.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.2rem;
+}
+
+.section-logo {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  border: 2px solid var(--jojo-secondary);
+  box-shadow: 0 0 15px rgba(255, 179, 0, 0.5);
+  object-fit: cover;
+}
+
+.section-header h2 {
+  color: var(--jojo-secondary);
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  margin: 0;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
+}
+
+/* --- 4. GRILLE ET CARTES (FLEXBOX) --- */
+.heroes-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.hero-card {
+  background-color: var(--jojo-surface);
+  border: 1px solid #333;
+  border-radius: 12px;
+  overflow: hidden;
+  width: 100%;
+  max-width: 280px;
+  display: flex;
+  flex-direction: column;
+  transition: transform var(--transition-speed) ease, box-shadow var(--transition-speed) ease;
+}
+
+.hero-card:hover {
+  transform: translateY(-8px); /* Fait "sauter" la carte vers le haut */
+  box-shadow: 0 12px 25px rgba(74, 20, 140, 0.7); /* Lueur violette */
+  border-color: var(--jojo-primary);
+}
+
+.card-image {
+  width: 100%;
+  height: 380px;
+  overflow: hidden;
+  background-color: #000;
+}
+
+.card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--transition-speed) ease;
+}
+
+/* Zoom sur l'image au survol de la carte */
+.hero-card:hover .card-image img {
+  transform: scale(1.08); 
+}
+
+.card-content {
+  padding: 1.5rem;
+  text-align: center;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-top: 3px solid var(--jojo-primary);
+}
+
+.card-content h3 {
+  margin: 0 0 0.5rem 0;
+  color: var(--jojo-text);
+  font-size: 1.4rem;
+  letter-spacing: 1px;
+}
+
+.card-content .stand-name {
+  margin: 0;
+  color: var(--jojo-secondary);
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+/* --- 5. RESPONSIVE (Tablettes & Mobiles) --- */
+@media (max-width: 768px) {
+  .section-header h2 {
+    font-size: 2rem;
+  }
+  
+  .hero-card {
+    /* Sur tablette : 2 cartes par ligne */
+    max-width: calc(50% - 1.25rem); 
+  }
+}
+
+@media (max-width: 550px) {
+  .hero-card {
+    /* Sur mobile : 1 seule carte par ligne */
+    max-width: 100%; 
+  }
+  
+  .card-image {
+    height: 300px;
+  }
+
+  .codex-nav {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+}
